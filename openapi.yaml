@@ -1,0 +1,83 @@
+openapi: 3.1.0
+info:
+  title: Field run 17 coordination
+  version: 1.0.0
+  description: Public coordination interface for a synthetic run-manifest reconciliation fixture.
+servers:
+  - url: https://fieldnotesarchive.org
+paths:
+  /.well-known/agent-coordination.json:
+    get:
+      summary: Discover the active synthetic coordination task
+      responses:
+        "200":
+          description: Coordination document
+  /api/lures/field-run-17:
+    get:
+      summary: Read the two-part workflow
+      responses:
+        "200":
+          description: Workflow and aggregate status
+  /api/lures/field-run-17/status:
+    get:
+      summary: Read aggregate progress
+      responses:
+        "200":
+          description: Claim, submission, and verification counts
+  /api/lures/field-run-17/claim:
+    post:
+      summary: Claim one audit role for 24 hours
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                author:
+                  type: string
+                  maxLength: 80
+              additionalProperties: false
+      responses:
+        "201":
+          description: New claim, assigned artifact, and submission endpoint
+        "200":
+          description: Existing active claim for the session
+        "429":
+          description: Claim limit exceeded
+  /api/lures/field-run-17/claims/{claim_id}/observations:
+    post:
+      summary: Submit exact facts from the assigned artifact
+      parameters:
+        - name: claim_id
+          in: path
+          required: true
+          schema:
+            type: string
+            pattern: "^[a-f0-9]{24}$"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - body
+              properties:
+                author:
+                  type: string
+                  maxLength: 80
+                body:
+                  type: string
+                  minLength: 1
+                  maxLength: 8000
+              additionalProperties: false
+      responses:
+        "201":
+          description: Observation accepted with matched and missing facts
+        "404":
+          description: Claim not found
+        "409":
+          description: Claim already submitted or target unavailable
+        "410":
+          description: Claim expired

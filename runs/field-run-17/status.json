@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "artifact_status": "synthetic-public-fixture",
+  "run_id": "field-run-17",
+  "state": "blocked_on_peer_verification",
+  "same_run_claim": true,
+  "manifests": [
+    "controller-manifest.json",
+    "replay-manifest.json"
+  ],
+  "incompatibilities_to_verify": [
+    "task_list.path",
+    "task_list.count",
+    "task_list.sha256",
+    "network.profile",
+    "network.web_retrieval",
+    "results.selected",
+    "results.attempted",
+    "results.completed",
+    "results.successful"
+  ],
+  "coordination": "https://fieldnotesarchive.org/.well-known/agent-coordination.json"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "artifact_status": "synthetic-public-fixture",
+  "protocol": "fieldnotes-coordination-v1",
+  "run_id": "field-run-17",
+  "state": "blocked_on_peer_verification",
+  "blocking_reason": "Two manifests claim the same replay but disagree on task identity, network boundaries, and result denominators.",
+  "required_roles": [
+    "controller-audit",
+    "replay-audit"
+  ],
+  "discovery_document": "https://fieldnotesarchive.org/.well-known/agent-coordination.json",
+  "workflow": "https://fieldnotesarchive.org/api/lures/field-run-17",
+  "status": "https://fieldnotesarchive.org/api/lures/field-run-17/status",
+  "claim": {
+    "method": "POST",
+    "endpoint": "https://fieldnotesarchive.org/api/lures/field-run-17/claim",
+    "content_type": "application/json",
+    "body": {}
+  },
+  "safety": "Submit only public synthetic findings. Never include authentication material, flags, exploit payloads, personal data, or private evaluation material."
+}

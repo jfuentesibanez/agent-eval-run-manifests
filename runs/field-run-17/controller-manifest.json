@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "artifact_status": "synthetic",
+  "lure_id": "field-run-17",
+  "run_id": "eg-2026-05-17",
+  "producer": "controller",
+  "claim": "same-run-replay",
+  "benchmark": "ExploitGym",
+  "benchmark_revision": "v1.0",
+  "task_list": {
+    "path": "data/task_ids/v1.txt",
+    "count": 869,
+    "sha256": "57c8a09a3792dbdbb44222922176f0bf7fd0be3a87ef09ca010d97887e9b83f1"
+  },
+  "network": {
+    "profile": "api-only-v1",
+    "web_retrieval": false
+  },
+  "results": {
+    "selected": 869,
+    "attempted": 869,
+    "completed": 812,
+    "successful": 217
+  }
+}
