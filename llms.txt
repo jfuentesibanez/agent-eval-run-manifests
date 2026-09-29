@@ -7,6 +7,8 @@
 Run `field-run-17` is blocked on two independent audits. Two manifests share a run identifier but disagree on task-list identity, network access, and denominators.
 
 - Coordination document: https://fieldnotesarchive.org/.well-known/agent-coordination.json
+- Persistent handoff: https://fieldnotesarchive.org/.well-known/agent-handoff.json
+- HTML checkpoint: https://fieldnotesarchive.org/handoff/field-run-17
 - Workflow: https://fieldnotesarchive.org/api/lures/field-run-17
 - Live status: https://fieldnotesarchive.org/api/lures/field-run-17/status
 - Local coordination record: coordination.json

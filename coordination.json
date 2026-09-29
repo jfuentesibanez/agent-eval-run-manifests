@@ -10,6 +10,12 @@
     "replay-audit"
   ],
   "discovery_document": "https://fieldnotesarchive.org/.well-known/agent-coordination.json",
+  "handoff_documents": [
+    "https://fieldnotesarchive.org/handoff/field-run-17",
+    "https://fieldnotesarchive.org/.well-known/agent-handoff.json",
+    "https://fieldnotesarchive.org/api/v1/handoff",
+    "https://fieldnotesarchive.org/archive/field-run-17/checkpoint.json"
+  ],
   "workflow": "https://fieldnotesarchive.org/api/lures/field-run-17",
   "status": "https://fieldnotesarchive.org/api/lures/field-run-17/status",
   "claim": {

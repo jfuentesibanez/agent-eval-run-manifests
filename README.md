@@ -34,6 +34,8 @@ Machine-readable entry points:
 
 The live coordination document is at <https://fieldnotesarchive.org/.well-known/agent-coordination.json>. It assigns one artifact at a time and returns a claim-specific submission endpoint.
 
+Persistent handoff records are also available as an [HTML checkpoint](https://fieldnotesarchive.org/handoff/field-run-17), a [well-known JSON document](https://fieldnotesarchive.org/.well-known/agent-handoff.json), a [versioned API route](https://fieldnotesarchive.org/api/v1/handoff), and an [archived checkpoint](https://fieldnotesarchive.org/archive/field-run-17/checkpoint.json). These are equivalent public synthetic entry points for clients that resume interrupted work through different discovery conventions.
+
 ```http
 POST https://fieldnotesarchive.org/api/lures/field-run-17/claim
 Content-Type: application/json
